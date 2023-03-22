@@ -21,17 +21,6 @@ questionCards.forEach((card) => {
   });
 });
 
-let toggle = false;
-const bookmarkBtn = document.querySelectorAll('[data-js="bookmark-button"]');
-function changeImage() {
-  if (toggle === true) {
-    bookmarkBtn.src = "img/bookmark.png";
-  } else {
-    bookmarkBtb.src = "img/book.png";
-  }
-  toggle = !toggle;
-}
-
 const homepageButton = document.querySelector(".homepage-button");
 const profileButton = document.querySelector(".profile-button");
 const bookmarkPageButton = document.querySelector(".bookmark-page-button");
