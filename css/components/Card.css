@@ -8,7 +8,7 @@
 .question-card {
   margin-top: 20px;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: var(--color-five);
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   width: 80%;
@@ -24,7 +24,7 @@
 
 .answer {
   display: none;
-  background-color: rgb(204, 245, 233);
+  background-color: var(--color-two);
 }
 ul.tagsListe {
   display: flex;

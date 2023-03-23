@@ -12,7 +12,7 @@
 }
 
 button {
-  background-color: #5a9969;
+  background-color: var(--color-one);
   color: #fff;
   border: 1px groove;
   border-radius: 5px;
@@ -24,7 +24,7 @@ button:hover {
   transform: translate(4px, 4px);
 }
 a {
-  background-color: #5a9969;
+  background-color: var(--color-one);
   color: #fff;
   border: 1px groove;
   border-radius: 5px;

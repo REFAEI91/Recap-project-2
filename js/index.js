@@ -1,3 +1,8 @@
+const primaryColor = "#fbefcc";
+const secondaryColor = "#f9ccac";
+const accentColor = "#f4a688";
+const errorColor = "#e0876a";
+
 const questionOne = "What is the capital of India?";
 const answerOne = "New Delhi";
 const questionTwo = "What is the capital of USA?";

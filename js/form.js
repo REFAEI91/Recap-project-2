@@ -33,12 +33,6 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log(event.target.elements);
   const li1 = document.createElement("li");
-  li1.textContent =
-    "Question: " +
-    event.target.elements.addquestions.value +
-    " --- Answer: " +
-    event.target.elements.answer.value;
-  "Tags: " + event.target.elements.tags.value;
   li1.classList.add("question-card");
   li1.innerHTML = `
 <div class="question-card">
@@ -47,6 +41,10 @@ form.addEventListener("submit", (event) => {
 <div >
   Answer :${event.target.elements.answer.value}
   </div>
+  <ul class="tagsListe">
+  <li>#${event.target.elements.tags.value}</li>
+
+</ul>
 `;
   const maxLength =
     event.target.elements.addquestions.getAttribute("maxlength");
