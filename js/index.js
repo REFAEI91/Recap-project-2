@@ -8,6 +8,21 @@ const questionFour = "What is the capital of France?";
 const answerFour = "Paris";
 const questionFive = "What is the capital of Germany?";
 const answerFive = "Berlin";
+const homepageButton = document.querySelector(".homepage-button");
+const profileButton = document.querySelector(".profile-button");
+const bookmarkPageButton = document.querySelector(".bookmark-page-button");
+
+homepageButton.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+profileButton.addEventListener("click", () => {
+  window.location.href = "profile.html";
+});
+
+bookmarkPageButton.addEventListener("click", () => {
+  window.location.href = "Bookmark.html";
+});
 const questionCards = document.querySelectorAll('[data-js="question-card"]');
 
 questionCards.forEach((card) => {
@@ -42,23 +57,6 @@ button.addEventListener("click", function () {
   }
 });
 
-const homepageButton = document.querySelector('[data-js="homepage-button"]');
-const profileButton = document.querySelector('[data-js="profile-button"]');
-const bookmarkPageButton = document.querySelector(
-  '[data-js="bookmark-page-button"]'
-);
-
-homepageButton.addEventListener("click", () => {
-  window.location.href = "index.html";
-});
-
-profileButton.addEventListener("click", () => {
-  window.location.href = "profile.html";
-});
-
-bookmarkPageButton.addEventListener("click", () => {
-  window.location.href = "Bookmark.html";
-});
 const main = document.querySelector('[data-js="main"]');
 const newCardOne = document.createElement("section");
 newCardOne.classList.add("question-container");
