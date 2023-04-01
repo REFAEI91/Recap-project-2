@@ -145,3 +145,37 @@ const newBookmarkButton2 = newCardTwo.querySelector(
 newBookmarkButton.addEventListener("click", () => {
   newBookmarkButton.classList.toggle("bookmarked");
 });
+// Retrieve the card element and bookmark button
+const card = document.querySelector(".card");
+const bookmarkButton = card.querySelector('[data-js="bookmark-button"]');
+
+// Check if the card is already bookmarked
+const isBookmarked = localStorage.getItem("bookmarkedCards")?.includes(card.id);
+
+// If the card is bookmarked, add the 'bookmarked' class
+if (isBookmarked) {
+  bookmarkButton.classList.add("bookmarked");
+}
+
+// Add a click event listener to the bookmark button
+bookmarkButton.addEventListener("click", () => {
+  // Toggle the 'bookmarked' class on the bookmark button
+  bookmarkButton.classList.toggle("bookmarked");
+
+  // Get an array of bookmarked card IDs from localStorage
+  const bookmarkedCards = localStorage.getItem("bookmarkedCards")
+    ? JSON.parse(localStorage.getItem("bookmarkedCards"))
+    : [];
+
+  // Add or remove the current card's ID from the array
+  const cardId = card.id;
+  const index = bookmarkedCards.indexOf(cardId);
+  if (index === -1) {
+    bookmarkedCards.push(cardId);
+  } else {
+    bookmarkedCards.splice(index, 1);
+  }
+
+  // Save the updated array of bookmarked card IDs to localStorage
+  localStorage.setItem("bookmarkedCards", JSON.stringify(bookmarkedCards));
+});
